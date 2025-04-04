@@ -1,5 +1,6 @@
 export GH_TOKEN=`cat gh_token`
-ORGANISATION=NclRSE-Training
+# ORGANISATION=NclRSE-Training
+ORGANISATION=jsteyn
 
 # sql:
 	SCRIPT1="select slug, w.title, humandate, humantime, startdate, enddate, r.description, r.longitude, r.latitude, language, country, online, pilot, inc_lesson_site, pre_survey, post_survey, carpentry_code, curriculum_code, flavour_id, eventbrite, inc_lesson_site, pre_survey, post_survey, r.what_three_words, schedule \
@@ -99,29 +100,35 @@ EOM
 fi
 
 
-## Log into GitHub
+echo Log into GitHub
 gh auth login
-## Create website from template
-gh repo create ${ORGANISATION}/${SLUG} --template carpentries/workshop-template --clone --public --description "${TITLE}" --homepage "https://${ORGANISATION}.github.io/${SLUG}"
-## Delete lines 38 to 58
-sed -i '38,58d' ${SLUG}/index.md
-## Delete lines 6 to 21
-sed -i '6,21d' ${SLUG}/index.md
-## Insert index.inc after line 6 of index.md
-sed -i '5r index.inc' ${SLUG}/index.md
-## Delete lines 8 to 72 in _config.yml
-sed -i '8,72d' ${SLUG}/_config.yml
-## Insert config.inc after line 8 of _config.yml
-sed -i '8r config.inc' ${SLUG}/_config.yml
-## Copy schedule
-if [ ${SCHEDULE} != " " ]
+echo Create website from template
+gh repo create ${ORGANISATION}/${SLUG} --template carpentries/workshop-template --public --description "${TITLE}" 
+echo Edit the URL for GitHub Pages
+gh repo edit ${ORGANISATION}/${SLUG} --homepage "https://${ORGANISATION}.github.io/${SLUG}"
+echo Clone the repo
+gh repo clone ${ORGANISATION}/${SLUG} ../${SLUG}
+echo Delete lines 38 to 58
+sed -i '38,58d' ../${SLUG}/index.md
+echo Delete lines 6 to 21
+sed -i '6,21d' ../${SLUG}/index.md
+echo Insert index.inc after line 6 of index.md
+sed -i '5r index.inc' ../${SLUG}/index.md
+echo Delete lines 8 to 72 in _config.yml
+sed -i '8,72d' ../${SLUG}/_config.yml
+echo Insert config.inc after line 8 of _config.yml
+sed -i '8r config.inc' ../${SLUG}/_config.yml
+echo Copy schedule
+if [ ${SCHEDULE} != "na" ]
 then
-  cp ${SCHEDULE}.html ${SLUG}/_includes/${CARPENTRY}/schedule.html
+  cp ${SCHEDULE}.html ../${SLUG}/_includes/${CARPENTRY}/schedule.html
 fi
-cd ${SLUG}
+
+echo Delete temporary files
+rm script?.sql
+
+echo Commit changes to repository
+cd ../${SLUG}
 git add .
 git commit -m "Update"
 git push
-
-## Delete temporary files
-rm script?.sql
