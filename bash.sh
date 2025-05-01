@@ -127,6 +127,8 @@ echo Edit the URL for GitHub Pages
 gh repo edit ${ORGANISATION}/${SLUG} --homepage "${ORGANISATION}.github.io/${SLUG}"
 
 # add a sleep here? e.g. sleep 10s # wait for 10 seconds - allow time for clone to complete before attempting to write
+echo sleep for 10
+sleep 10s
 
 echo Clone the repo
 gh repo clone git@github.com:${ORGANISATION}/${SLUG}.git ../${SLUG}
@@ -134,6 +136,9 @@ gh repo clone git@github.com:${ORGANISATION}/${SLUG}.git ../${SLUG}
 
 # add a sleep here? e.g. sleep 10s # wait for 10 seconds - allow time for clone to complete before attempting to write
 # and/or check that index.md exists before continuing
+echo sleep for 10
+sleep 10s
+
 
 echo Delete lines 213 to 263 # remove SPECIAL REQUIREMENTS, ACESSIBILITY to end of glosario paragraph
 
@@ -152,7 +157,7 @@ echo Insert config.inc after line 8 of _config.yml
 sed -i '8r config.inc' ../${SLUG}/_config.yml
 
 echo Replace default with our custom install_instructions
-cp -r install_instructions ../${SLUG}/_includes/install_instructions
+cp -r install_instructions ../${SLUG}/_includes/
 
 echo Copy schedule
 if [ ${SCHEDULE} != "na" ]
