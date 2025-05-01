@@ -142,7 +142,7 @@ sed -i '8,57d' ../${SLUG}/_config.yml
 echo Insert config.inc after line 8 of _config.yml
 sed -i '8r config.inc' ../${SLUG}/_config.yml
 echo Replace default with our custom install_instructions
-cp install_instructions/* ../${SlUG}/_includes/install_instructions
+cp -r install_instructions ../${SLUG}/_includes/
 echo Copy schedule
 if [ ${SCHEDULE} != "na" ]
 then
