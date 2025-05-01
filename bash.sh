@@ -136,8 +136,6 @@ gh repo clone git@github.com:${ORGANISATION}/${SLUG}.git ../${SLUG}
 
 # add a sleep here? e.g. sleep 10s # wait for 10 seconds - allow time for clone to complete before attempting to write
 # and/or check that index.md exists before continuing
-echo sleep for 10
-sleep 10s
 
 
 echo Delete lines 213 to 263 # remove SPECIAL REQUIREMENTS, ACESSIBILITY to end of glosario paragraph
