@@ -125,9 +125,18 @@ echo Create website from template
 gh repo create ${ORGANISATION}/${SLUG} --template carpentries/workshop-template --public --description "${TITLE}" 
 echo Edit the URL for GitHub Pages
 gh repo edit ${ORGANISATION}/${SLUG} --homepage "${ORGANISATION}.github.io/${SLUG}"
+
+# add a sleep here? e.g. sleep 10s # wait for 10 seconds - allow time for clone to complete before attempting to write
+
 echo Clone the repo
 gh repo clone git@github.com:${ORGANISATION}/${SLUG}.git ../${SLUG}
-echo Delete lines 213 to 263
+
+
+# add a sleep here? e.g. sleep 10s # wait for 10 seconds - allow time for clone to complete before attempting to write
+# and/or check that index.md exists before continuing
+
+echo Delete lines 213 to 263 # remove SPECIAL REQUIREMENTS, ACESSIBILITY to end of glosario paragraph
+
 sed -i '213,263d' ../${SLUG}/index.md
 echo Insert requirements.inc after line 213 of index.md
 sed -i '213r requirements.inc' ../${SLUG}/index.md
