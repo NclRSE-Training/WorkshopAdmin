@@ -87,6 +87,14 @@ body:
     validations:
       required: true
   - type: input
+    id: human_time
+    attributes:
+      label: Human Readable Time
+      description: Human readable Time of the carpentry event
+      placeholder: "e.g. 0900-1600"
+    validations:
+      required: true
+  - type: input
     id: start_date
     attributes:
       label: Start Date
