@@ -194,9 +194,14 @@ body:
       label: Post-workshop Survey
       description: URL of the post-workshop survey
       placeholder: "e.g. https://example.com/post-workshop-survey"
-  - type: schedule
+  - type: dropdown
     id: schedule
     attributes:
       label: Schedule
-      description: URL of the schedule for the carpentry event
-      placeholder: "e.g. https://example.com/schedule"
+      description: Which schedule should be templated
+      options:
+        - unix
+        - r
+        - python
+        - hpc 
+        - git
