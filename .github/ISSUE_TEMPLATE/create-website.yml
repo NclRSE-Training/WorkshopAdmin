@@ -27,7 +27,7 @@ body:
     attributes:
       label: Slug
       description: Slug to be used for the website.
-      placeholder: "e.g. 2025-05-15-stirling"
+      placeholder: "e.g. 2025-05-15-stirling (YYYY-MM-DD-site[-online])"
     validations:
       required: true
   - type: input
@@ -50,8 +50,8 @@ body:
     id: country
     attributes:
       label: Country
-      description: Country where the carpentry will be held
-      placeholder: "e.g. United Kingdom"
+      description: Country where the carpentry will be held (two-letter ISO-3166 code for the country)
+      placeholder: "e.g. uk"
     validations:
       required: true
   - type: input
@@ -132,9 +132,9 @@ body:
       label: Pilot
       description: Is this a pilot incubator event?
       options:
-        - label: Yes
+        - label: "Yes"
           required: true
-        - label: No
+        - label: "No"
           required: true
   - type: dropdown
     id: carpentry
@@ -194,3 +194,9 @@ body:
       label: Post-workshop Survey
       description: URL of the post-workshop survey
       placeholder: "e.g. https://example.com/post-workshop-survey"
+  - type: schedule
+    id: schedule
+    attributes:
+      label: Schedule
+      description: URL of the schedule for the carpentry event
+      placeholder: "e.g. https://example.com/schedule"
