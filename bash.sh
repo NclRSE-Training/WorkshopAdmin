@@ -87,13 +87,13 @@ startdate: ${STARTDATE}
 enddate: ${ENDDATE}
 instructor: [`echo -e "$RESULT2"|sed "s/\t/ /g"|sed -e "s/^[ \t]*//g"|sed -e "s/^/\"/g"|sed -e "s/$/\"/g"|sed ':a;N;$!ba;s/\n/, /g'|sed -e "s/^[ ]*//g"`]
 helper: [`echo -e "$RESULT3"|sed "s/\t/ /g"|sed -e "s/^[ \t]*//g"|sed -e "s/^/\"/g"|sed -e "s/$/\"/g"|sed ':a;N;$!ba;s/\n/, /g'|sed -e "s/^[ ]*//g"`]
-email: [`echo -e "$RESULT4"|sed "s/\t/ /g"|sed -e "s/^[ \t]*//g"|sed -e "s/^/\"/g"|sed -e "s/$/\"/g"||sed ':a;N;$!ba;s/\n/, /g'sed -e "s/^[ ]*//g"`]
+email: [`echo -e "$RESULT4"|sed "s/\t/ /g"|sed -e "s/^[ \t]*//g"|sed -e "s/^/\"/g"|sed -e "s/$/\"/g"|sed ':a;N;$!ba;s/\n/, /g'|sed -e "s/^[ ]*//g"`]
 collaborative_notes: https://hackmd.io/@rseteam/${SLUG}
 eventbrite: ${EVENTBRITE}
 what3words: ${WHATTHREEWORDS}
 EOM
 
-if [ $PILOT == 1 ]
+if [[ $PILOT == 1 ]]
 then 
 	P="true"
 else
@@ -108,7 +108,7 @@ pilot: ${P}
 title: "${TITLE}"
 EOM
 
-if [ $PILOT == 1 ]
+if [[ $PILOT == 1 ]]
 then
 cat <<EOM >>config.inc
 incubator_lesson_site: "${INC_LESSON_SITE}"
@@ -125,6 +125,7 @@ echo Create website from template
 gh repo create ${ORGANISATION}/${SLUG} --template carpentries/workshop-template --public --description "${TITLE}" 
 echo Edit the URL for GitHub Pages
 gh repo edit ${ORGANISATION}/${SLUG} --homepage "${ORGANISATION}.github.io/${SLUG}"
+sleep 15
 echo Clone the repo
 gh repo clone git@github.com:${ORGANISATION}/${SLUG}.git ../${SLUG}
 echo Delete lines 213 to 263
