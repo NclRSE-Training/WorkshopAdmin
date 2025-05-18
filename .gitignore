@@ -1,6 +1,6 @@
 gh_token
 *.inc
 script*.sql
-
 #Except the following files
 !requirements.inc
+!includes/*.inc
