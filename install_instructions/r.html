@@ -20,14 +20,32 @@
       {% comment %}		This section for Newcastle University Only START     {% endcomment %}
 			<h4>Newcastle University Managed Computers</h4>
 			<p>
-				The University provides 'packaged' software, which can be installed without admin rights on your managed laptop or workstation. 
+				The University provides 'packaged' software, which can be installed without admin rights on your managed laptop or workstation.  It is necessary to install both the R language and the RStudio IDE (integrated development environment).  Follow the instructions below to install these from Software Center (available on all managed laptops/workstations). If you can't see the software you need, log a ticket at <a href="https://nuservice.ncl.ac.uk">https://nuservice.ncl.ac.uk</a> to request that it is added to Software Center. You'll need to provide the PC name.
 				<ol>
-					<li>Open 'Software Center' from the start button and search for 'CRAN-R'.</li>
-					<li>Choose Git (x64) and click 'install'</li>
-					<li>After install is completed, "R" can be launched from the start menu.</li>
+					<li>Open <strong>Software Center</strong> from the start button and search for <strong>'CRAN-R'</strong>.</li>
+					<li>Click <code>Install</code></li>
+					<li>After install is completed, search for <strong>'RStudio'</strong></li>
+					<li>Click <code>Install</code>  - this will take around 30 minutes but can run in the background while you do other tasks.</li>
+					<li>RStudio can then be launched from the start menu.</li>
 				</ol>
-				If you can't see the software you need, log a ticket at <a href="https://nuservice.ncl.ac.uk">https://nuservice.ncl.ac.uk</a> to request that it is added to Software Center. You'll need to provide the PC name. 
-			</p>	
+			<h4>Required R packages</h4>
+			After installing R, it is necessary to install packages for the workshop within R. This workshop uses the following packages:
+				<ul>
+					<li>ggplot</li>
+					<li>dplyr</li>
+					<li>knitr</li>
+				</ul>
+			Packages can be installed using the RStudio console on the left of the screen.  Type:<br>
+				<code>install.packages("ggplot2")</code><br>
+				<code>install.packages("dplyr")</code><br>
+				<code>install.packages("knitr")</code><br>
+			</p>
+			<h5>Notes:</h5>
+			<ul>
+				<li>On a University Managed computer, you will not have admin rights and the packages will be installed 'per user' to your H: drive in a location like:
+				<code>c:\Users\local_b1234567\Temp\RtmpOipgT2\downloaded_packages</code><br></li>
+				<li>If you are prompted to 'pick a mirror', any choice is fine but it's normally fastest to pick one in the UK like London or Bristol</li>
+			</ul>	
 		
 			<h4>Other Windows devices</h4>
 {% comment %}		This section for Newcastle University Only END     {% endcomment %}
@@ -40,7 +58,8 @@
           Note that if you have separate user and admin accounts, you should run the
           installers as administrator (right-click on .exe file and select "Run as
           administrator" instead of double-clicking). Otherwise problems may occur later,
-          for example when installing R packages.
+          for example when installing R packages.<br>
+          Next, follow 'Required R packages' above to ensure you have the required packages for this workshop.
         </p>
         <h4>Video Tutorial</h4>
         <div class="yt-wrapper2">
@@ -57,6 +76,22 @@
           Also, please install the
           <a href="https://posit.co/download/rstudio-desktop/">RStudio IDE</a>.
         </p>
+	<h4>Required R packages</h4>
+		After installing R, it is necessary to install packages for the workshop within R. This workshop uses the following packages:
+	<ul>
+		<li>ggplot</li>
+		<li>dplyr</li>
+		<li>knitr</li>
+	</ul>
+		Packages can be installed using the RStudio console on the left of the screen.  Type:<br>
+			<code>install.packages("ggplot2")</code><br>
+			<code>install.packages("dplyr")</code><br>
+			<code>install.packages("knitr")</code><br>
+		</p>
+<h5>Notes:</h5>
+<ul>
+	<li>If you are prompted to 'pick a mirror', any choice is fine but it's normally fastest to pick one in the UK like London or Bristol</li>
+</ul>	
         <h4>Video Tutorial</h4>
         <div class="yt-wrapper2">
         <div class="yt-wrapper">
@@ -75,6 +110,23 @@
           Also, please install the
           <a href="https://posit.co/download/rstudio-desktop/">RStudio IDE</a>.
         </p>
+        	<h4>Required R packages</h4>
+        <p>
+		After installing R, it is necessary to install packages for the workshop within R. This workshop uses the following packages:
+	<ul>
+		<li>ggplot</li>
+		<li>dplyr</li>
+		<li>knitr</li>
+	</ul>
+		Packages can be installed using the RStudio console on the left of the screen.  Type:<br>
+			<code>install.packages("ggplot2")</code><br>
+			<code>install.packages("dplyr")</code><br>
+			<code>install.packages("knitr")</code><br>
+	</p>
+<h5>Notes:</h5>
+<ul>
+	<li>If you are prompted to 'pick a mirror', any choice is fine but it's normally fastest to pick one in the UK like London or Bristol</li>
+</ul>
       </article>
     </div>
   </div>

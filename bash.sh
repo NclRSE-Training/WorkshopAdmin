@@ -125,9 +125,21 @@ echo Create website from template
 gh repo create ${ORGANISATION}/${SLUG} --template carpentries/workshop-template --public --description "${TITLE}" 
 echo Edit the URL for GitHub Pages
 gh repo edit ${ORGANISATION}/${SLUG} --homepage "${ORGANISATION}.github.io/${SLUG}"
+
+# add a sleep here? e.g. sleep 10s # wait for 10 seconds - allow time for clone to complete before attempting to write
+echo sleep for 10
+sleep 10s
+
 echo Clone the repo
 gh repo clone git@github.com:${ORGANISATION}/${SLUG}.git ../${SLUG}
-echo Delete lines 213 to 263
+
+
+# add a sleep here? e.g. sleep 10s # wait for 10 seconds - allow time for clone to complete before attempting to write
+# and/or check that index.md exists before continuing
+
+
+echo Delete lines 213 to 263 # remove SPECIAL REQUIREMENTS, ACESSIBILITY to end of glosario paragraph
+
 sed -i '213,263d' ../${SLUG}/index.md
 echo Insert requirements.inc after line 213 of index.md
 sed -i '213r requirements.inc' ../${SLUG}/index.md
@@ -141,6 +153,10 @@ echo Delete lines 8 to 72 in _config.yml
 sed -i '8,57d' ../${SLUG}/_config.yml
 echo Insert config.inc after line 8 of _config.yml
 sed -i '8r config.inc' ../${SLUG}/_config.yml
+
+echo Replace default with our custom install_instructions
+cp -r install_instructions ../${SLUG}/_includes/
+
 echo Copy schedule
 if [ ${SCHEDULE} != "na" ]
 then
