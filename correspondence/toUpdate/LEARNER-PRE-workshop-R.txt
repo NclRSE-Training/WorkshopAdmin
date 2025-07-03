@@ -1,0 +1,45 @@
+55949	06/05/2025	2025-05-06-NCL	Programming with R	Tue 06 May 2025	PGR Learning Lab 6.19 HDB	Henry Daysh Building	intro.aims.intent
+
+subject: Programming with R - Tue 06 May 2025
+to: workshoporganisation@group.newcastle.ac.uk
+
+Good Afternoon
+
+Thank you for registering for the Programming with R Workshop on Tue 06 May 2025 (08:45-17:00) in <strong></strong>Room PGR Learning Lab 6.19 - Henry Daysh Building</strong> <i>https://what3words.com/intro.aims.intent</i>
+
+Please note that there is a waiting list for this workshop so if you can't attend, please log in and unenrol at https://workshops.ncl.ac.uk/view/book/modal/55949
+If you can't un-enrol yourself, please email carol.booth2@ncl.ac.uk and jannetta.steyn@ncl.ac.uk as we may still be able to re-allocate your place.
+Prior to attending the workshop, please could you do two things:
+
+1. Complete the pre-workshop survey linked below:
+
+      https://carpentries.typeform.com/to/wi32rS?slug=2025-05-06-NCL
+
+2. If you are bringing your own laptop to use at the workshop, please try to install R, RStudio and the required R packages using the instructions on the Workshop website at 
+
+       https://nclrse-training.github.io/2025-05-06-NCL/#r-1
+
+We will have PCs and an online environment available but you will find it more convenient to continue your work after the workshop if you have installed R on your own device.  Please email us at training.researchcomputing@newcastle.ac.uk if you have any questions about software installation.
+
+
+
+There's lots of useful information in your workshop website at: https://nclrse-training.github.io/2025-05-06-NCL
+- We will start the day using a collaborative document at: https://hackmd.io/@rseteam/2025-05-06-NCL
+- <italic>(you may like to bookmark these 2 pages)</italic>
+- Sorry, we can't provide catering.  There will be tea and coffee but please bring your own cup
+- We will start at 9am sharp, we'll be there from 8:30 so please don't be late :-)
+
+We're looking forward to seeing you next week!
+
+RSE training team 
+training.researchcomputing@newcastle.ac.uk
+
+Research Software Engineering
+https://rse.ncldata.dev/contact
+RSE Events page
+
+Newcastle University
+Newcastle upon Tyne
+Tyne and Wear
+NE1 7RU
+United Kingdom

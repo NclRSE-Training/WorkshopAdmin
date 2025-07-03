@@ -1,0 +1,25 @@
+TO: attendees from workhops.ncl.ac.uk & workshoporganisation@group.newcastle.ac.uk
+SUBJECT: [Action] HPC Carpentry - Wed 12 March 2025
+
+BODY: 
+Good Afternoon
+
+Many thanks for coming to our workshop on Wed 12 March 2025.  We enjoyed meeting you and hope that you enjoyed and benefited from the HPC Carpentry workshop.   
+
+As we briefly mentioned in the workshop, <b>your 'training' enrolment on Rocket was only temporary</b>.  Next week, we will be emptying the 'training' user group and clearing out the 'training' project area on Rocket and RDW (/nobackup/proj/training/ and /rdw/03/rse-hpc/training/), so please download or move any files you care about to your home directory.
+Files you have saved in your home directory (~ or /mnt/nfs/home/userid) will not be touched but you will only be able to access them if you have login access to Rocket because you are part of another project on Rocket.  If you need access to Rocket for your work, please go to https://hpc.researchcomputing.ncl.ac.uk/dokuwiki/doku.php?id=started:register to find out how to register your project.
+
+From the number of responses, most of you have already filled this in, but because it's anonymous we don't know who is missing so this is your friendly reminder to please fill in the post-workshop survey at: 
+
+https://carpentries.typeform.com/to/UgVdRQ?slug=2025-03-12-NCL
+  
+We want our workshops to be the best they can be and your input really helps us!
+
+You will have had a separate email from workshops.ncl.ac.uk with another survey, because the PGR development team need to collect different feedback. Sorry about that!
+
+Kind Regards
+Jannetta, Frances, Carol and Lorenzo
+
+
+
+2025-03-12-NCL HPC Day 2 of 2: HPC Carpentry 	Wed 12 March 2025	BSTC.3.30.CHART.PC	Barbara Strang Teaching Centre	mercy.treat.bolt 	Dr Jannetta Steyn	Dr. Frances Turner	Carol Booth and Dr. Lorenzo Rossi

@@ -1,0 +1,21 @@
+subject: {workshop} - {humandate}
+to: workshoporganisation@group.newcastle.ac.uk
+
+Good Afternoon
+
+Thank you for registering for the {workshop} Workshop on {humandate} in Room {address} (https://what3words.com/{w3w}).
+
+Please note that there is a waiting list for this workshop so if you can't attend, please unenrol at https://workshops.ncl.ac.uk/view/book/modal/{occurrenceID}
+If you can't un-enrol yourself, please email carol.booth2@ncl.ac.uk and jannetta.steyn@ncl.ac.uk as we may still be able to re-allocate your place.
+Prior to attending the workshop, please could you complete the pre-workshop survey linked below:
+
+https://carpentries.typeform.com/to/wi32rS?slug={slug}
+
+- There's lots of useful information in your workshop website at: https://nclrse-training.github.io/{slug}
+- PCs and an online environment are provided, so the instructions for installing software on your laptop are OPTIONAL :-)
+- Sorry, we can't provide catering.  There will be tea and coffee but please bring your own cup
+- We will start at 9am sharp, we'll be there from 8:30 so please don't be late :-)
+
+We're looking forward to seeing you next week!
+
+RSE training team
